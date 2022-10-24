@@ -13,19 +13,21 @@
     <link rel="stylesheet" href="assets/css/banner.css">
     <link rel="stylesheet" href="assets/css/produtos.css">
     <link rel="stylesheet" href="assets/css/rodape.css">
-    <link rel="stylesheet" href="assets/css/contato.css">
+    <link rel="stylesheet" href="assets/css/formulario.css">
 </head>
 
 <body>
     <header class="cabecalho container">
         <h1 class="cabecalho__logo">
-            <img src="assets/img/logo-alura-geek.svg" alt="Logo da Alura Geek" class="logo__imagem">
+            <a href="index.html">
+                <img src="assets/img/logo-alura-geek.svg" alt="Logo da Alura Geek" class="logo__imagem">
+            </a>
         </h1>
         <div class="cabecalho__search">
             <input type="text" class="search__input" placeholder="O que deseja encontrar?">
             <button class="search__button"></button>
         </div>
-        <a href="#" class="cabecalho__login botao">Login</a>
+        <a href="login.html" class="cabecalho__login botao">Login</a>
     </header>
 
     <main>
@@ -176,40 +178,42 @@
         </section>
     </main>
 
-    <section class="rodape container">
-        <div class="rodape__alurageek">
-            <figure class="rodape__logo">
-                <img src="./assets/img/logo-alura-geek.svg" alt="Logo da Alura Geek" class="logo__imagem">
-            </figure>
-            <nav class="rodape__navegacao">
-                <a href="#" class="navegacao__link">Politíca de privacidade</a>
-                <a href="#" class="navegacao__link">Programa fidelidade</a>
-                <a href="#" class="navegacao__link">Nossas lojas</a>
-                <a href="#" class="navegacao__link">Quem somos nós</a>
-                <a href="#" class="navegacao__link">Quero ser franqueado</a>
-                <a href="#" class="navegacao__link">Anuncie aqui</a>
-            </nav>
-        </div>
-
-        <form class="contato__formulario">
-            <h4 class="contato__titulo">Fale conosco</h4>
-            <div class="contato__campo">
-                <label for="nome" class="contato__label">Nome</label>
-                <input type="text" class="contato__input" id="nome" required>
+    <footer class="rodape ">
+        <section class="rodape__principal container">
+            <div class="rodape__alurageek">
+                <figure class="rodape__logo">
+                    <img src="./assets/img/logo-alura-geek.svg" alt="Logo da Alura Geek" class="logo__imagem">
+                </figure>
+                <nav class="rodape__navegacao">
+                    <a href="#" class="navegacao__link">Politíca de privacidade</a>
+                    <a href="#" class="navegacao__link">Programa fidelidade</a>
+                    <a href="#" class="navegacao__link">Nossas lojas</a>
+                    <a href="#" class="navegacao__link">Quem somos nós</a>
+                    <a href="#" class="navegacao__link">Quero ser franqueado</a>
+                    <a href="#" class="navegacao__link">Anuncie aqui</a>
+                </nav>
             </div>
-            <span class="mensagem__erro"></span>
-            <div class="contato__campo">
-                <label for="mensagem" class="contato__label">Mensagem</label>
-                <textarea type="text" rows="2" class="contato__input" id="mensagem" required></textarea>
-            </div>
-            <span class="mensagem__erro"></span>
-            <input type="submit" class="contato__botao botao" id="enviar" value="Enviar mensagem">
-        </form>
-    </section>
 
-    <footer class="rodape__desenvolvedor container">
-        <h5 class="desenvolvedor__titulo">Desenvolvido por Marcos Allan</h5>
-        <p class="desenvolvedor__ano">2022</p>
+            <form class="formulario">
+                <h4 class="formulario__titulo">Fale conosco</h4>
+                <div class="formulario__campo">
+                    <label for="nome" class="formulario__label">Nome</label>
+                    <input type="text" class="formulario__input" id="nome" required>
+                </div>
+                <span class="mensagem__erro"></span>
+                <div class="formulario__campo">
+                    <label for="mensagem" class="formulario__label">Mensagem</label>
+                    <textarea type="text" rows="2" class="formulario__input" id="mensagem" required></textarea>
+                </div>
+                <span class="mensagem__erro"></span>
+                <input type="submit" class="formulario__botao botao" id="enviar" value="Enviar mensagem">
+            </form>
+        </section>
+
+        <section class="rodape__desenvolvedor container">
+            <h5 class="desenvolvedor__titulo">Desenvolvido por Marcos Allan</h5>
+            <p class="desenvolvedor__ano">2022</p>
+        </section>
     </footer>
 </body>
 

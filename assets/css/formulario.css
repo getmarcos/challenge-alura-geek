@@ -1,9 +1,9 @@
-.contato__titulo {
+.formulario__titulo {
     color: #464646;
     margin-top: 1rem;
 }
 
-.contato__campo {
+.formulario__campo {
     background-color: #FFFFFF;
     border-radius: 4px;
     box-shadow: 0 1px 0 0 #C8C8C8;
@@ -12,16 +12,16 @@
     padding: .75rem .5rem;
 }
 
-.contato__campo:has(.contato__input:focus) {
+.formulario__campo:has(.formulario__input:focus) {
     border-bottom: 3px solid #2A7AE4;
 }
 
-.contato__label {
+.formulario__label {
     color: #A2A2A2;
     font-size: .75rem;
 }
 
-.contato__input {
+.formulario__input {
     border: none;
     color: #464646;
     display: flex;
@@ -32,7 +32,11 @@
     width: 100%;
 }
 
-.contato__botao {
+.formulario__input:focus {
+    outline: 0;
+}
+
+.formulario__botao {
     background-color: #2A7AE4;
     color: #FFFFFF;
     margin-top: .5rem;

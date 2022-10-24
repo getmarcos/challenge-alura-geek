@@ -1,6 +1,13 @@
 .rodape {
     background-color: #EAF2FD;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape__principal {
+    display: flex;
+    flex-direction: column;
 }
 
 .rodape__desenvolvedor.container {
@@ -10,11 +17,6 @@
 .rodape__logo {
     margin-bottom: 2rem;
     text-align: center;
-}
-
-.logo__imagem {
-    width: 100%;
-    max-width: 170px;
 }
 
 .rodape__navegacao {
@@ -41,7 +43,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .rodape.container {
+    .rodape__principal.container {
         padding: 2rem;
     }
 
@@ -50,24 +52,28 @@
         margin-top: 2rem;
     }
 
+    .rodape__principal {
+        flex-direction: row;
+    }
+
     .rodape__logo {
         text-align: left;
     }
 
     .rodape__navegacao {
-        align-items: flex-start;
+        align-items:flex-start;
     }
 
     .navegacao__link {
         margin-bottom: 1.5rem;
     }
 
-    .contato__formulario {
+    .formulario {
         flex-grow: 1;
         margin-left: 5.875rem;
     }
 
-    .contato__formulario .contato__titulo {
+    .formulario .formulario__titulo {
         margin-top: 0;
     }
 }
@@ -77,7 +83,7 @@
         margin-top: 4rem;
     }
     
-    .rodape.container {
+    .rodape__principal.container {
         padding: 4rem 9.5rem;
     }
 
