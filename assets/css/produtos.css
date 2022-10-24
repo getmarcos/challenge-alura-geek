@@ -30,8 +30,8 @@
 }
 
 .card__item {
-    width: calc(100vw / 2 - 2rem);
-    max-width: 200px;
+    width: 45%;
+    max-width: 160px;
     flex-grow: 1;
 }
 
@@ -65,6 +65,7 @@
 @media screen and (min-width: 768px) {
     .produtos.container {
         padding-top: 2rem;
+        padding-bottom: 0;
     }
 
     .card__item {
@@ -90,6 +91,6 @@
     }
 
     .card__imagem {
-        height: 185px;
+        max-height: 160px;
     }
 }
