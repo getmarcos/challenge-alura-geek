@@ -1,0 +1,49 @@
+.contato__titulo {
+    color: #464646;
+    margin-top: 1rem;
+}
+
+.contato__campo {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 0 #C8C8C8;
+    margin-bottom: .3rem;
+    margin-top: 1rem;
+    padding: .75rem .5rem;
+}
+
+.contato__campo:has(.contato__input:focus) {
+    border-bottom: 3px solid #2A7AE4;
+}
+
+.contato__label {
+    color: #A2A2A2;
+    font-size: .75rem;
+}
+
+.contato__input {
+    border: none;
+    color: #464646;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    padding-top: .25rem;
+    width: 100%;
+}
+
+.contato__botao {
+    background-color: #2A7AE4;
+    color: #FFFFFF;
+    margin-top: .5rem;
+    cursor: pointer;
+    max-width: none;
+}
+
+.erro {
+    display: block;
+    color: #464646;
+    font-size: .8rem;
+    font-weight: 700;
+    width: 100%;
+}

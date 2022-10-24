@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="assets/css/cabecalho.css">
     <link rel="stylesheet" href="assets/css/banner.css">
     <link rel="stylesheet" href="assets/css/produtos.css">
+    <link rel="stylesheet" href="assets/css/rodape.css">
+    <link rel="stylesheet" href="assets/css/contato.css">
 </head>
 
 <body>
@@ -173,6 +175,42 @@
             </ul>
         </section>
     </main>
+
+    <section class="rodape container">
+        <div class="rodape__alurageek">
+            <figure class="rodape__logo">
+                <img src="./assets/img/logo-alura-geek.svg" alt="Logo da Alura Geek" class="logo__imagem">
+            </figure>
+            <nav class="rodape__navegacao">
+                <a href="#" class="navegacao__link">Politíca de privacidade</a>
+                <a href="#" class="navegacao__link">Programa fidelidade</a>
+                <a href="#" class="navegacao__link">Nossas lojas</a>
+                <a href="#" class="navegacao__link">Quem somos nós</a>
+                <a href="#" class="navegacao__link">Quero ser franqueado</a>
+                <a href="#" class="navegacao__link">Anuncie aqui</a>
+            </nav>
+        </div>
+
+        <form class="contato__formulario">
+            <h4 class="contato__titulo">Fale conosco</h4>
+            <div class="contato__campo">
+                <label for="nome" class="contato__label">Nome</label>
+                <input type="text" class="contato__input" id="nome" required>
+            </div>
+            <span class="mensagem__erro"></span>
+            <div class="contato__campo">
+                <label for="mensagem" class="contato__label">Mensagem</label>
+                <textarea type="text" rows="2" class="contato__input" id="mensagem" required></textarea>
+            </div>
+            <span class="mensagem__erro"></span>
+            <input type="submit" class="contato__botao botao" id="enviar" value="Enviar mensagem">
+        </form>
+    </section>
+
+    <footer class="rodape__desenvolvedor container">
+        <h5 class="desenvolvedor__titulo">Desenvolvido por Marcos Allan</h5>
+        <p class="desenvolvedor__ano">2022</p>
+    </footer>
 </body>
 
 </html>
