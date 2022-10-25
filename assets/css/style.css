@@ -20,6 +20,11 @@ body {
     cursor: pointer;
 }
 
+.botao--azul {
+    color: #FFFFFF;
+    background-color: #2a7ae4;
+}
+
 @media screen and (min-width: 768px) {
     .container {
         padding: 1rem 2rem;

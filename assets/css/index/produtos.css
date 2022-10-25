@@ -1,0 +1,28 @@
+.produtos__titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.titulo__verMais {
+    display: flex;
+    align-items: center;
+    color: #2A7AE4;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.verMais__seta {
+    margin-left: .85rem;
+}
+
+.card__item:nth-child(5), .card__item:nth-child(6) {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .card__item:nth-child(5), .card__item:nth-child(6) {
+        display: block;
+    }
+}

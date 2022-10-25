@@ -16,3 +16,10 @@
 .rodape {
     margin-top: 0;
 }
+
+@media screen and (min-width: 1024px) {
+    .login .botao {
+        width: 100%;
+        max-width: 400px;
+    }
+}
