@@ -11,10 +11,21 @@
   max-width: 400px;
   margin-inline: auto;
   text-align: left;
+  position: relative;
+}
+
+.login .formulario__botao {
+  margin-top: 1.7rem;
 }
 
 .rodape {
   margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .login .formulario__botao {
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
