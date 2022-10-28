@@ -11,6 +11,18 @@ export function valida(input) {
   }
 }
 
+export function validaLogin(input) {
+  const tipoDeInput = input.dataset.login;
+  if (input.validity.valid) {
+    input.parentElement.classList.remove("formulario__campo--invalido");
+    input.parentElement.querySelector("span").innerHTML = "";
+  } else {
+    input.parentElement.classList.add("formulario__campo--invalido");
+    input.parentElement.querySelector(".mensagem__erro").innerHTML =
+      mostraMensagem(tipoDeInput, input);
+  }
+}
+
 const tiposDeErro = ["valueMissing", "typeMismatch", "patternMismatch"];
 
 const mensagensDeErro = {
@@ -21,6 +33,11 @@ const mensagensDeErro = {
     valueMissing: "Campo e-mail é obrigatório.",
     typeMismatch: "Informe um endereço de e-mail válido.",
     patternMismatch: "Exemplo de e-mail válido: seuemail@dominio.com.",
+  },
+  senha: {
+    valueMissing: "Campo senha é obrigatório.",
+    patternMismatch:
+      "A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não símbolos",
   },
   mensagem: {
     valueMissing: "Campo mensagem é obrigatório.",
