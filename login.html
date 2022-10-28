@@ -34,14 +34,13 @@
                 <h4 class="formulario__titulo">Iniciar Sessão</h4>
                 <div class="formulario__campo">
                     <label for="email" class="formulario__label"></label>
-                    <input type="email" class="formulario__input" id="email" placeholder="Escreva seu e-mail" required>
+                    <input type="email" class="formulario__input" id="email" placeholder="Escreva seu e-mail" data-login="email" required>
+                    <span class="mensagem__erro"></span>
                 </div>
-                <span class="mensagem__erro"></span>
                 <div class="formulario__campo">
-                    <input type="password" class="formulario__input" id="senha" placeholder="Escreva sua senha"
-                        required></input>
+                    <input type="password" minlength="8" class="formulario__input" id="senha" placeholder="Escreva sua senha" data-login="senha" required></input>
+                    <span class="mensagem__erro"></span>
                 </div>
-                <span class="mensagem__erro"></span>
                 <input type="submit" class="formulario__botao botao botao--azul" id="enviar" value="Entrar">
             </form>
         </section>
@@ -67,14 +66,14 @@
                 <h4 class="formulario__titulo">Fale conosco</h4>
                 <div class="formulario__campo">
                     <label for="nome" class="formulario__label">Nome</label>
-                    <input type="text" class="formulario__input" id="nome" required>
+                    <input type="text" class="formulario__input" id="nome" data-formulario="nome" required>
+                    <span class="mensagem__erro"></span>
                 </div>
-                <span class="mensagem__erro"></span>
                 <div class="formulario__campo">
                     <label for="mensagem" class="formulario__label">Mensagem</label>
-                    <textarea type="text" rows="2" class="formulario__input" id="mensagem" required></textarea>
+                    <textarea type="text" rows="2" class="formulario__input" id="mensagem" data-formulario="nome" required></textarea>
+                    <span class="mensagem__erro"></span>
                 </div>
-                <span class="mensagem__erro"></span>
                 <input type="submit" class="formulario__botao botao botao--azul" id="enviar" value="Enviar mensagem">
             </form>
         </section>
