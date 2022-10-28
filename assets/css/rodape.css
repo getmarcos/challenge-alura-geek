@@ -1,97 +1,97 @@
 .rodape {
-    background-color: #EAF2FD;
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
+  background-color: #eaf2fd;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .rodape__principal {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .rodape__desenvolvedor.container {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .rodape__logo {
-    margin-bottom: 2rem;
-    text-align: center;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .rodape__navegacao {
-    color: #464646;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  color: #464646;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navegacao__link {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .rodape__desenvolvedor {
-    background-color: #FFFFFF;
-    text-align: center;
+  background-color: #ffffff;
+  text-align: center;
 }
 
 .desenvolvedor__titulo {
-    font-weight: 500;
-    color: #464646;
+  font-weight: 500;
+  color: #464646;
 }
 
 @media screen and (min-width: 768px) {
-    .rodape__principal.container {
-        padding: 2rem;
-    }
+  .rodape__principal.container {
+    padding: 2rem;
+  }
 
-    .rodape {
-        display: flex;
-        margin-top: 2rem;
-    }
+  .rodape {
+    display: flex;
+    margin-top: 2rem;
+  }
 
-    .rodape__principal {
-        flex-direction: row;
-    }
+  .rodape__principal {
+    flex-direction: row;
+  }
 
-    .rodape__logo {
-        text-align: left;
-    }
+  .rodape__logo {
+    text-align: left;
+  }
 
-    .rodape__navegacao {
-        align-items:flex-start;
-    }
+  .rodape__navegacao {
+    align-items: flex-start;
+  }
 
-    .navegacao__link {
-        margin-bottom: 1.5rem;
-    }
+  .navegacao__link {
+    margin-bottom: 1.5rem;
+  }
 
-    .formulario {
-        flex-grow: 1;
-        margin-left: 5.875rem;
-    }
+  .formulario {
+    flex-grow: 1;
+    margin-left: 5.875rem;
+  }
 
-    .formulario .formulario__titulo {
-        margin-top: 0;
-    }
+  .formulario .formulario__titulo {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .rodape {
-        margin-top: 4rem;
-    }
-    
-    .rodape__principal.container {
-        padding: 4rem 9.5rem;
-    }
+  .rodape {
+    margin-top: 4rem;
+  }
 
-    .rodape__alurageek {
-        display: flex;
-    }
+  .rodape__principal.container {
+    padding: 4rem 9.5rem;
+  }
 
-    .rodape__logo {
-        margin-right: 5.875rem;
-    }
+  .rodape__alurageek {
+    display: flex;
+  }
+
+  .rodape__logo {
+    margin-right: 5.875rem;
+  }
 }

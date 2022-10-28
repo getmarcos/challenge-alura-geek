@@ -1,38 +1,38 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
-    background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .container {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .botao {
-    border: 1px solid #2a7ae4;
-    color: #2a7ae4;
-    font-weight: 700;
-    max-width: 200px;
-    padding: 1rem 2rem;
-    cursor: pointer;
+  border: 1px solid #2a7ae4;
+  color: #2a7ae4;
+  font-weight: 700;
+  max-width: 200px;
+  padding: 1rem 2rem;
+  cursor: pointer;
 }
 
 .botao--azul {
-    color: #FFFFFF;
-    background-color: #2a7ae4;
+  color: #ffffff;
+  background-color: #2a7ae4;
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        padding: 1rem 2rem;
-    }
+  .container {
+    padding: 1rem 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .container {
-        padding: 2rem 9.5rem;
-    }
+  .container {
+    padding: 2rem 9.5rem;
+  }
 }
