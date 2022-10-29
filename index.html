@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="assets/css/index/banner.css" />
     <link rel="stylesheet" href="assets/css/produtos.css" />
     <link rel="stylesheet" href="assets/css/index/produtos.css" />
-    <link rel="stylesheet" href="assets/css/rodape.css" />
     <link rel="stylesheet" href="assets/css/formulario.css" />
+    <link rel="stylesheet" href="assets/css/login/login.css" />
+    <link rel="stylesheet" href="assets/css/rodape.css" />
   </head>
 
   <body>
@@ -38,10 +39,48 @@
         />
         <button class="search__button"></button>
       </div>
-      <a href="login.html" class="cabecalho__login botao">Login</a>
+      <button class="cabecalho__login botao">Login</button>
     </header>
 
     <main>
+      <section class="login container">
+        <form class="formulario">
+          <h4 class="formulario__titulo">Iniciar Sessão</h4>
+          <div class="formulario__campo">
+            <label for="email" class="formulario__label"></label>
+            <input
+              type="email"
+              class="formulario__input"
+              id="email"
+              placeholder="Escreva seu e-mail"
+              data-login="email"
+              required
+            />
+            <span class="mensagem__erro"></span>
+          </div>
+          <div class="formulario__campo">
+            <input
+              type="password"
+              minlength="6"
+              class="formulario__input"
+              id="senha"
+              placeholder="Escreva sua senha"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+              data-login="senha"
+              required
+            />
+            <span class="mensagem__erro"></span>
+          </div>
+          <input
+            type="submit"
+            class="formulario__botao botao botao--azul"
+            id="enviar"
+            data-botao="login"
+            value="Entrar"
+          />
+        </form>
+      </section>
+
       <section class="banner container">
         <h2 class="banner__titulo">Dezembro Promocional</h2>
         <p class="banner__descricao">
@@ -49,10 +88,11 @@
         </p>
         <a class="banner__button botao">Ver Consoles</a>
       </section>
+
       <section class="starWars produtos container">
         <div class="produtos__titulo">
           <h3 class="titulo__texto">Star Wars</h3>
-          <a href="adicionar-produtos.html" class="titulo__verMais"
+          <a href="#" class="titulo__verMais"
             >Ver mais
             <img
               src="assets/img/seta.svg"
@@ -128,7 +168,7 @@
       <section class="consoles produtos container">
         <div class="produtos__titulo">
           <h3 class="titulo__texto">Consoles</h3>
-          <a href="adicionar-produtos.html" class="titulo__verMais"
+          <a href="#" class="titulo__verMais"
             >Ver mais
             <img
               src="assets/img/seta.svg"
@@ -204,7 +244,7 @@
       <section class="diversos produtos container">
         <div class="produtos__titulo">
           <h3 class="titulo__texto">Diversos</h3>
-          <a href="adicionar-produtos.html" class="titulo__verMais"
+          <a href="#" class="titulo__verMais"
             >Ver mais
             <img
               src="assets/img/seta.svg"
@@ -342,4 +382,5 @@
     </footer>
   </body>
   <script src="./js/app.js" type="module"></script>
+  <script src="./js/login.js" type="module"></script>
 </html>

@@ -1,3 +1,7 @@
+.login {
+  display: none;
+}
+
 .login.container {
   padding: 5.625rem 1rem;
 }

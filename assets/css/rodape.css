@@ -1,6 +1,5 @@
 .rodape {
   background-color: #eaf2fd;
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -49,7 +48,6 @@
 
   .rodape {
     display: flex;
-    margin-top: 2rem;
   }
 
   .rodape__principal {
@@ -79,10 +77,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .rodape {
-    margin-top: 4rem;
-  }
-
   .rodape__principal.container {
     padding: 4rem 9.5rem;
   }

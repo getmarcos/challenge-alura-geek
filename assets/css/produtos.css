@@ -46,6 +46,10 @@
     width: 23%;
     margin: 1%;
   }
+
+  .diversos:last-child {
+    padding-bottom: 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -72,5 +76,9 @@
 
   .card__imagem {
     max-height: 150px;
+  }
+
+  .produtos:last-child {
+    padding-bottom: 4rem;
   }
 }

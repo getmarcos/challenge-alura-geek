@@ -1,4 +1,4 @@
-import { valida, validaLogin } from "./valida.js";
+import { valida } from "./valida.js";
 
 const inputsFormulario = document.querySelectorAll("[data-formulario]");
 const submitFormulario = document.querySelector("[data-botao='submit']");
@@ -9,25 +9,41 @@ const submitLogin = document.querySelector("[data-botao='login']");
 submitFormulario.addEventListener("click", (evento) => {
   evento.preventDefault();
   inputsFormulario.forEach((input) => {
-    valida(input);
+    if (input.hasAttribute("data-formulario")) {
+      valida(input, input.dataset.formulario);
+    } else {
+      valida(input, input.dataset.login);
+    }
   });
 });
 
 inputsFormulario.forEach((input) => {
   input.addEventListener("blur", () => {
-    valida(input);
+    if (input.hasAttribute("data-formulario")) {
+      valida(input, input.dataset.formulario);
+    } else {
+      valida(input, input.dataset.login);
+    }
   });
 });
 
 submitLogin.addEventListener("click", (evento) => {
   evento.preventDefault();
   inputsLogin.forEach((input) => {
-    validaLogin(input);
+    if (input.hasAttribute("data-formulario")) {
+      valida(input, input.dataset.formulario);
+    } else {
+      valida(input, input.dataset.login);
+    }
   });
 });
 
 inputsLogin.forEach((input) => {
   input.addEventListener("blur", () => {
-    validaLogin(input);
+    if (input.hasAttribute("data-formulario")) {
+      valida(input, input.dataset.formulario);
+    } else {
+      valida(input, input.dataset.login);
+    }
   });
 });

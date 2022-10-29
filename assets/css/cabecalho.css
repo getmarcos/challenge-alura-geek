@@ -11,6 +11,7 @@
 
 .cabecalho__login {
   text-decoration: none;
+  background-color: transparent;
 }
 
 .cabecalho__search {
@@ -59,6 +60,12 @@
 
   .search__button {
     opacity: 0.5;
+  }
+
+  .cabecalho__login {
+    font-weight: 400;
+    font-size: 1rem;
+    width: 160px;
   }
 }
 

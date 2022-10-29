@@ -1,18 +1,4 @@
-export function valida(input) {
-  const tipoDeInput = input.dataset.formulario;
-
-  if (input.validity.valid) {
-    input.parentElement.classList.remove("formulario__campo--invalido");
-    input.parentElement.querySelector("span").innerHTML = "";
-  } else {
-    input.parentElement.classList.add("formulario__campo--invalido");
-    input.parentElement.querySelector(".mensagem__erro").innerHTML =
-      mostraMensagem(tipoDeInput, input);
-  }
-}
-
-export function validaLogin(input) {
-  const tipoDeInput = input.dataset.login;
+export function valida(input, tipoDeInput) {
   if (input.validity.valid) {
     input.parentElement.classList.remove("formulario__campo--invalido");
     input.parentElement.querySelector("span").innerHTML = "";
