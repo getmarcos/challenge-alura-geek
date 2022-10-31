@@ -2,12 +2,10 @@ export function valida(input, tipoDeInput) {
   if (input.validity.valid) {
     input.parentElement.classList.remove("formulario__campo--invalido");
     input.parentElement.querySelector("span").innerHTML = "";
-    return true;
   } else {
     input.parentElement.classList.add("formulario__campo--invalido");
     input.parentElement.querySelector(".mensagem__erro").innerHTML =
       mostraMensagem(tipoDeInput, input);
-      return false;
   }
 }
 
@@ -15,21 +13,33 @@ const tiposDeErro = ["valueMissing", "typeMismatch", "patternMismatch"];
 
 const mensagensDeErro = {
   nome: {
-    valueMissing: "Campo nome é obrigatório."
+    valueMissing: "Campo nome é obrigatório.",
   },
   email: {
     valueMissing: "Campo e-mail é obrigatório.",
     typeMismatch: "Informe um endereço de e-mail válido.",
-    patternMismatch: "Exemplo de e-mail válido: seuemail@dominio.com."
+    patternMismatch: "Exemplo de e-mail válido: seuemail@dominio.com.",
   },
   senha: {
     valueMissing: "Campo senha é obrigatório.",
     patternMismatch:
-      "A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não símbolos"
+      "A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não símbolos",
   },
   mensagem: {
-    valueMissing: "Campo mensagem é obrigatório."
-  }
+    valueMissing: "Campo mensagem é obrigatório.",
+  },
+  url: {
+    valueMissing: "Campo url é obrigatório.",
+  },
+  categoria: {
+    valueMissing: "Campo categoria é obrigatório.",
+  },
+  preco: {
+    valueMissing: "Campo preço é obrigatório.",
+  },
+  descricao: {
+    valueMissing: "Campo descrição é obrigatório.",
+  },
 };
 
 function mostraMensagem(tipoDeInput, input) {
