@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/cabecalho.css" />
+    <link rel="stylesheet" href="assets/css/produtos.css" />
+    <link rel="stylesheet" href="assets/css/produtos/produtos.css" />
     <link rel="stylesheet" href="assets/css/formulario.css" />
-    <link rel="stylesheet" href="assets/css/login/login.css" />
     <link rel="stylesheet" href="assets/css/cadastro-login.css" />
     <link rel="stylesheet" href="assets/css/rodape.css" />
   </head>
@@ -40,30 +41,66 @@
     </header>
 
     <main>
-      <section class="cadastro login container">
+      <section class="cadastro adicionar-produto container">
+        <div class="produtos__titulo">
+          <h3 class="titulo__texto">Adicionar novo produto</h3>
+        </div>
         <form class="formulario">
-          <h4 class="formulario__titulo">Iniciar Sessão</h4>
           <div class="formulario__campo">
-            <label for="email" class="formulario__label"></label>
+            <label for="url" class="formulario__label">URL da imagem</label>
             <input
-              type="email"
+              type="url"
               class="formulario__input"
-              id="email"
-              placeholder="Escreva seu e-mail"
-              data-login="email"
+              id="url"
+              data-cadastro="url"
               required
             />
             <span class="mensagem__erro"></span>
           </div>
           <div class="formulario__campo">
+            <label for="categoria" class="formulario__label">Categoria</label>
             <input
-              type="password"
-              minlength="6"
+              type="text"
               class="formulario__input"
-              id="senha"
-              placeholder="Escreva sua senha"
-              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
-              data-login="senha"
+              id="categoria"
+              data-cadastro="categoria"
+              required
+            />
+            <span class="mensagem__erro"></span>
+          </div>
+          <div class="formulario__campo">
+            <label for="nome" class="formulario__label">Nome do produto</label>
+            <input
+              type="text"
+              class="formulario__input"
+              id="nome"
+              data-cadastro="nome"
+              required
+            />
+            <span class="mensagem__erro"></span>
+          </div>
+          <div class="formulario__campo">
+            <label for="preco" class="formulario__label"
+              >Preço do produto</label
+            >
+            <input
+              type="text"
+              class="formulario__input"
+              id="preco"
+              data-cadastro="preco"
+              required
+            />
+            <span class="mensagem__erro"></span>
+          </div>
+          <div class="formulario__campo">
+            <label for="descricao" class="formulario__label"
+              >Descrição do produto</label
+            >
+            <input
+              type="text"
+              class="formulario__input"
+              id="descricao"
+              data-cadastro="descricao"
               required
             />
             <span class="mensagem__erro"></span>
@@ -72,9 +109,8 @@
             type="submit"
             class="formulario__botao botao botao--azul"
             id="enviar"
-            data-botao="login"
+            data-botao="salvar"
             value="Entrar"
-            formaction="produtos.html"
           />
         </form>
       </section>
@@ -142,6 +178,6 @@
         <p class="desenvolvedor__ano">2022</p>
       </section>
     </footer>
+    <script src="./js/app.js" type="module"></script>
   </body>
-  <script src="./js/app.js" type="module"></script>
 </html>

@@ -1,20 +1,19 @@
-.login.container {
+.cadastro.container {
   padding: 5.625rem 1rem;
 }
 
-.login .formulario {
+.cadastro .formulario {
   margin-left: 0;
   text-align: center;
 }
 
-.login .formulario__campo {
-  max-width: 400px;
+.cadastro .formulario__campo {
   margin-inline: auto;
   text-align: left;
   position: relative;
 }
 
-.login .formulario__botao {
+.cadastro .formulario__botao {
   margin-top: 1.7rem;
 }
 
@@ -23,14 +22,19 @@
 }
 
 @media screen and (min-width: 768px) {
-  .login .formulario__botao {
+  .cadastro .formulario__botao {
     margin-top: 1rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .login .botao {
+  .cadastro.container {
+    width: 40%;
+    margin: 0 auto;
+    padding: 5.625rem 1rem;
+  }
+
+  .cadastro .botao {
     width: 100%;
-    max-width: 400px;
   }
 }
