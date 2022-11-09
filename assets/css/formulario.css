@@ -1,10 +1,10 @@
 .formulario__titulo {
-  color: #464646;
+  color: var(--formulario-texto);
   margin-top: 1rem;
 }
 
 .formulario__campo {
-  background-color: #ffffff;
+  background-color: var(--branco-color);
   border-radius: 4px;
   box-shadow: 0 1px 0 0 #c8c8c8;
   margin-bottom: .3rem;
@@ -13,13 +13,13 @@
 }
 
 .formulario__campo:has(.formulario__input:focus) {
-  border-bottom: 3px solid #2a7ae4;
+  border-bottom: 3px solid var(--azul-destaque);
 }
 
 .formulario__campo--invalido {
   margin-bottom: 1.3rem;
   margin-top: 1.2rem;
-  border-bottom: 3px solid #e63636;
+  border-bottom: 3px solid var(--vermelho-input);
 }
 
 .formulario__label {
@@ -29,7 +29,7 @@
 
 .formulario__input {
   border: none;
-  color: #464646;
+  color: var(--formulario-texto);
   display: flex;
   font-size: 1rem;
   font-weight: 400;
@@ -50,7 +50,7 @@
 .mensagem__erro {
     position: absolute;
     margin-top: 1.2rem;
-    color: #464646;
+    color: var(--formulario-texto);
     font-size: .8rem;
     font-weight: 700;
 }

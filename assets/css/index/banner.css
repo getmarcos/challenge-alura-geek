@@ -23,7 +23,7 @@
 }
 
 .banner__button {
-  background-color: #2a7ae4;
+  background-color: var(--azul-destaque);
   color: #ffffff;
   text-align: center;
 }

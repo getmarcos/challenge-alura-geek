@@ -1,5 +1,5 @@
 .rodape {
-  background-color: #eaf2fd;
+  background-color: var(--bg-color-rodape);
   display: flex;
   flex-direction: column;
 }
@@ -19,7 +19,7 @@
 }
 
 .rodape__navegacao {
-  color: #464646;
+  color: var(--cinza-texto);
   font-weight: 500;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
 
 .desenvolvedor__titulo {
   font-weight: 500;
-  color: #464646;
+  color: var(--cinza-texto);
 }
 
 @media screen and (min-width: 768px) {
