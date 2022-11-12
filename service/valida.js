@@ -6,10 +6,12 @@ export function valida(input, tipoDeInput) {
   if (input.validity.valid) {
     input.parentElement.classList.remove("formulario__campo--invalido");
     input.parentElement.querySelector("span").innerHTML = "";
+    return true;
   } else {
     input.parentElement.classList.add("formulario__campo--invalido");
     input.parentElement.querySelector(".mensagem__erro").innerHTML =
       mostraMensagem(tipoDeInput, input);
+    return false;
   }
 }
 

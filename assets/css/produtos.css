@@ -9,12 +9,24 @@
 }
 
 .card__item {
+  text-align: center;
   width: 48%;
   margin: 1%;
 }
 
 .card__imagem {
   width: 100%;
+  max-width: 200px;
+  min-height: 185px;
+  max-height: 195px;
+}
+
+.card__item:nth-child(n+5) {
+  display: none;
+}
+
+.todos__produtos.card__item:nth-child(n+5) {
+  display: block;
 }
 
 .card__titulo {
@@ -46,6 +58,10 @@
     width: 23%;
     margin: 1%;
   }
+  .card__imagem {
+    min-height: initial;
+    height: 213px;
+  }
 
   .diversos:last-child {
     padding-bottom: 2rem;
@@ -75,7 +91,8 @@
   }
 
   .card__imagem {
-    max-height: 150px;
+    object-fit: cover;
+    height: 150px;
   }
 
   .produtos:last-child {
