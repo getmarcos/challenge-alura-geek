@@ -1,6 +1,6 @@
 const criaSecao = (categoria) => {
   const secao = document.createElement("section");
-  secao.classList = `${categoria} produtos container`;
+  secao.classList = `${categoria} categorias`;
   secao.innerHTML = `
       <div class="produtos__titulo">
         <h3 class="titulo__texto">${categoria}</h3>

@@ -2,12 +2,11 @@ import { clienteService } from "../service/cliente-service.js";
 import { produtoService } from "../service/cria-produtos.js";
 import { validaForm } from "../service/validadores.js";
 
-//
 // [Lista todos os produtos (Por categoria ou não)]
 const secaoProdutos = document.querySelector("[data-produtos]");
 const listarProdutos = (produtos, categoria) => {
   const tituloCategoria = document.querySelector("[data-categoria]");
-  tituloCategoria.innerText = `Produtos ${categoria}`;
+  tituloCategoria.innerText = `${categoria}`;
 
   const lista = document.createElement("ul");
   lista.classList.add("produtos__cards");
