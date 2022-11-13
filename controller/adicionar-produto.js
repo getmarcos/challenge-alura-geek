@@ -18,10 +18,10 @@ botaoAdicionar.addEventListener("click", async (evento) => {
   if (isValid) {
     try {
       await clienteService.criaProduto(dadosProduto());
-      window.location.href = "../telas/produtos.html";
+      window.location.href = "/telas/produtos.html";
     } catch (erro) {
       console.log(erro);
-      window.location.href = "../telas/erro.html";
+      window.location.href = "/telas/erro.html";
     }
   }
 });

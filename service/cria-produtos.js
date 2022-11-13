@@ -4,9 +4,9 @@ const criaSecao = (categoria) => {
   secao.innerHTML = `
       <div class="produtos__titulo">
         <h3 class="titulo__texto">${categoria}</h3>
-        <a href="./produtos.html?categoria=${categoria.replace(" ", "")}" class="titulo__verMais">Ver mais
+        <a href="./telas/produtos.html?categoria=${categoria.replace(" ", "")}" class="titulo__verMais">Ver mais
           <img
-            src="../assets/img/seta.svg"
+            src="./assets/img/seta.svg"
             alt="Seta do link ver mais"
             class="verMais__seta"
           />
