@@ -21,13 +21,7 @@ const criaSecao = (categoria) => {
   return secao;
 };
 
-const criaCardProduto = (produto, categoria) => {
-  const novoProduto = document.createElement("li");
-  if (window.location.href.includes("/telas/produtos.html")) {
-    novoProduto.className = "card__item todos__produtos";
-  } else {
-    novoProduto.classList.add("card__item");
-  }
+function validaURL(produto) {
   let urlImagem = produto.urlImagem;
   if (
     window.location.href.includes("index.html") &&
@@ -35,7 +29,34 @@ const criaCardProduto = (produto, categoria) => {
   ) {
     urlImagem = urlImagem.replace(".", "");
   }
-  novoProduto.innerHTML = `<img
+  return urlImagem;
+}
+
+const criaCardProduto = (produto, categoria) => {
+  const novoProduto = document.createElement("li");
+  let conteudo;
+  const urlImagem = validaURL(produto);
+  if (window.location.href.includes("/telas/produtos.html")) {
+    novoProduto.className = "card__item todos__produtos";
+    novoProduto.dataset.id = produto.id;
+
+    conteudo = `<img
+        src="${urlImagem}"
+        alt="Produto ${categoria}"
+        class="card__imagem"
+      />
+      <p class="card__titulo">${produto.nome}</p>
+      <p class="card__preco">${produto.preco}</p>
+      <a href="" class="card__link">Ver produto</a>
+      <button class="card__botao card-botao-lixeira data-excluir">
+        <img src="../assets/css/produtos/lixeira.svg" class="card__lixeira">
+      </button>
+      <button class="card__botao card-botao-caneta data-editar">
+        <img src="../assets/css/produtos/caneta.svg" class="card__caneta">
+      </button>`;
+  } else {
+    novoProduto.classList.add("card__item");
+    conteudo = `<img
         src="${urlImagem}"
         alt="Produto ${categoria}"
         class="card__imagem"
@@ -43,6 +64,9 @@ const criaCardProduto = (produto, categoria) => {
       <p class="card__titulo">${produto.nome}</p>
       <p class="card__preco">${produto.preco}</p>
       <a href="" class="card__link">Ver produto</a>`;
+  }
+
+  novoProduto.innerHTML = conteudo;
   return novoProduto;
 };
 

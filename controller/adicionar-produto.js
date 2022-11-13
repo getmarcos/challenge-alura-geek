@@ -4,6 +4,7 @@ import { validaForm } from "../service/validadores.js";
 
 const botaoAdicionar = document.querySelector("[data-cadastro='salvar']");
 const produtos = await clienteService.pegaProdutos();
+
 botaoAdicionar.addEventListener("click", async (evento) => {
   evento.preventDefault();
 

@@ -34,7 +34,21 @@ const criaProduto = ({ id, urlImagem, categoria, nome, preco, descricao }) => {
   });
 };
 
+const removeProduto = (id) => {
+  return fetch(
+    `https://challenge-ecommerce-alura-geek.herokuapp.com/produtos/${id}`,
+    {
+      method: "DELETE",
+    }
+  ).then((response) => {
+    if (!response.ok) {
+      throw new Error("Não foi possível remover o produto.");
+    }
+  });
+};
+
 export const clienteService = {
   pegaProdutos,
   criaProduto,
+  removeProduto,
 };
