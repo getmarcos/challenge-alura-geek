@@ -2,8 +2,10 @@
   "name": "challenge-alura-geek",
   "version": "1.0.0",
   "description": "<h1 align=\"center\"> Challenge Alura Geek </h1>",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/getmarcos/challenge-alura-geek/issues"
   },
-  "homepage": "https://github.com/getmarcos/challenge-alura-geek#readme",
-  "dependencies": {
-    "json-server": "^0.17.1"
-  }
+  "homepage": "https://github.com/getmarcos/challenge-alura-geek#readme"
 }

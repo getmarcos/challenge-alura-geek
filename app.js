@@ -1,0 +1,1 @@
+window.location.href = "../telas/index.html";

@@ -41,86 +41,10 @@
     </header>
 
     <main>
-      <section class="cadastro adicionar-produto container">
-        <div class="produtos__titulo">
-          <h3 class="titulo__texto">Adicionar novo produto</h3>
-        </div>
-        <form class="formulario">
-          <div class="formulario__campo">
-            <label for="url" class="formulario__label">URL da imagem</label>
-            <input
-              type="url"
-              class="formulario__input"
-              id="url"
-              data-cadastro="url"
-              required
-            />
-            <span class="mensagem__erro"></span>
-          </div>
-          <div class="formulario__campo">
-            <label for="categoria" class="formulario__label">Categoria</label>
-            <input
-              type="text"
-              class="formulario__input"
-              id="categoria"
-              data-cadastro="categoria"
-              required
-            />
-            <span class="mensagem__erro"></span>
-          </div>
-          <div class="formulario__campo">
-            <label for="nome" class="formulario__label">Nome do produto</label>
-            <input
-              type="text"
-              class="formulario__input"
-              id="nome"
-              data-cadastro="nome"
-              required
-            />
-            <span class="mensagem__erro"></span>
-          </div>
-          <div class="formulario__campo">
-            <label for="preco" class="formulario__label"
-              >Preço do produto</label
-            >
-            <input
-              type="text"
-              class="formulario__input"
-              id="preco"
-              data-cadastro="preco"
-              required
-            />
-            <span class="mensagem__erro"></span>
-          </div>
-          <div class="formulario__campo">
-            <label for="descricao" class="formulario__label"
-              >Descrição do produto</label
-            >
-            <input
-              type="text"
-              class="formulario__input"
-              id="descricao"
-              data-cadastro="descricao"
-              required
-            />
-            <span class="mensagem__erro"></span>
-          </div>
-          <input
-            type="submit"
-            class="formulario__botao botao botao--azul"
-            id="enviar"
-            data-cadastro="salvar"
-            value="Adicionar produto"
-          />
-        </form>
-      </section>
-
       <section class="produtos container" data-produtos>
         <div class="produtos__titulo">
           <h3 class="titulo__texto" data-categoria></h3>
-          <a class="botao botao--azul" data-adicionar>
-            Adicionar produto
-          </a>
+          <a class="botao botao--azul" data-adicionar> Adicionar produto </a>
         </div>
       </section>
     </main>
@@ -188,6 +112,5 @@
       </section>
     </footer>
     <script src="../controller/produtos.js" type="module"></script>
-    <!-- <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script> -->
   </body>
 </html>

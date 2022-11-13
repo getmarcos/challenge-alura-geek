@@ -1,5 +1,7 @@
 const pegaProdutos = () => {
-  return fetch(`http://localhost:3000/produtos`).then((response) => {
+  return fetch(
+    "https://challenge-ecommerce-alura-geek.herokuapp.com/produtos"
+  ).then((response) => {
     if (response.ok) {
       return response.json();
     }
@@ -8,20 +10,23 @@ const pegaProdutos = () => {
 };
 
 const criaProduto = ({ id, urlImagem, categoria, nome, preco, descricao }) => {
-  return fetch(`http://localhost:3000/produtos`, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      id,
-      urlImagem,
-      categoria,
-      nome,
-      preco,
-      descricao,
-    }),
-  }).then((response) => {
+  return fetch(
+    "https://challenge-ecommerce-alura-geek.herokuapp.com/produtos",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id,
+        urlImagem,
+        categoria,
+        nome,
+        preco,
+        descricao,
+      }),
+    }
+  ).then((response) => {
     if (response.ok) {
       return response.json();
     }
