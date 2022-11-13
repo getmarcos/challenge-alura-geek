@@ -4,7 +4,10 @@ const criaSecao = (categoria) => {
   secao.innerHTML = `
       <div class="produtos__titulo">
         <h3 class="titulo__texto">${categoria}</h3>
-        <a href="./telas/produtos.html?categoria=${categoria.replace(" ", "")}" class="titulo__verMais">Ver mais
+        <a href="./telas/produtos.html?categoria=${categoria.replace(
+          " ",
+          ""
+        )}" class="titulo__verMais">Ver mais
           <img
             src="./assets/img/seta.svg"
             alt="Seta do link ver mais"
@@ -25,8 +28,15 @@ const criaCardProduto = (produto, categoria) => {
   } else {
     novoProduto.classList.add("card__item");
   }
+  let urlImagem = produto.urlImagem;
+  if (
+    window.location.href.includes("index.html") &&
+    urlImagem.includes("./assets/img/")
+  ) {
+    urlImagem = urlImagem.replace(".", "");
+  }
   novoProduto.innerHTML = `<img
-        src="${produto.urlImagem}"
+        src="${urlImagem}"
         alt="Produto ${categoria}"
         class="card__imagem"
       />

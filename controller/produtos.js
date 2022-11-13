@@ -35,7 +35,6 @@ try {
   window.location.href = "./telas/erro.html";
 }
 
-//
 // [Adiciona novo produto ao servidor]
 const botaoNovoProduto = document.querySelector("[data-adicionar]");
 botaoNovoProduto.addEventListener("click", () => {
