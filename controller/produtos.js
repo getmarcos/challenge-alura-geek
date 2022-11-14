@@ -2,14 +2,24 @@ import { clienteService } from "../service/cliente-service.js";
 import { produtoService } from "../service/cria-produtos.js";
 import { validaForm } from "../service/validadores.js";
 
+const secaoProdutos = document.querySelector("[data-produtos]");
+
 // [botão adiciona novo produto]
-const botaoNovoProduto = document.querySelector("[data-adicionar]");
-botaoNovoProduto.addEventListener("click", () => {
-  window.location.href = "../telas/adicionar-produto.html";
-});
+const BotaoAdicionarProduto = (secaoProdutos) => {
+  const botaoAdicionarProduto = document.createElement("a");
+  botaoAdicionarProduto.classList = "botao botao--azul";
+  botaoAdicionarProduto.href = "../telas/adicionar-produto.html";
+  botaoAdicionarProduto.setAttribute("data-adicionar", "");
+  botaoAdicionarProduto.innerText = "Adicionar produto";
+
+  if (window.location.href.includes("produtos.html?admin=true")) {
+    const divTitulo = secaoProdutos.querySelector("div");
+    divTitulo.appendChild(botaoAdicionarProduto);
+  }
+};
+BotaoAdicionarProduto(secaoProdutos);
 
 // [Lista todos os produtos]
-const secaoProdutos = document.querySelector("[data-produtos]");
 const listarProdutos = (produtos, categoria) => {
   const tituloCategoria = document.querySelector("[data-categoria]");
   tituloCategoria.innerText = `Todos os produtos`;
@@ -17,12 +27,15 @@ const listarProdutos = (produtos, categoria) => {
   lista.classList.add("produtos__cards");
 
   produtos.forEach((produto) => {
-    const novoProduto = produtoService.criaCardProduto(produto, produto.categoria);
+    const novoProduto = produtoService.criaCardProduto(
+      produto,
+      produto.categoria
+    );
     if (categoria == null) {
-      tituloCategoria.innerText = `Todos os produtos`;
       lista.appendChild(novoProduto);
     } else if (categoria === produto.categoria.replace(" ", "")) {
       lista.appendChild(novoProduto);
+      tituloCategoria.innerText = produto.categoria;
     }
   });
   secaoProdutos.appendChild(lista);
