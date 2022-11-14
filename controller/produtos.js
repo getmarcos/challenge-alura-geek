@@ -70,7 +70,7 @@ cardsProdutos.addEventListener("click", async (evento) => {
       await clienteService.removeProduto(index);
       window.location.reload();
     } else if (isBotaoEdita) {
-      window.location.href = `telas/atualizar-produto.html?produto=${index}`;
+      window.location.href = `atualizar-produto.html?produto=${index}`;
     }
   } catch (erro) {
     console.log(erro);
