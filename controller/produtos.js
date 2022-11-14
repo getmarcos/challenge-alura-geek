@@ -58,20 +58,25 @@ carregaProdutos();
 const cardsProdutos = document.querySelector("[data-produtos]");
 cardsProdutos.addEventListener("click", async (evento) => {
   const isBotaoRemove = evento.target.className === "card__lixeira";
-  if (isBotaoRemove) {
-    try {
-      const produtos = await clienteService.pegaProdutos();
-      const produto = evento.target.closest("[data-id]");
-      const id = produto.dataset.id;
-      const index = produtos.findIndex((produto) => {
-        return produto.id === id;
-      });
+  const isBotaoEdita = evento.target.className === "card__caneta";
+  try {
+    const produtos = await clienteService.pegaProdutos();
+    const produto = evento.target.closest("[data-id]");
+    const id = produto.dataset.id;
+    const index = produtos.findIndex((produto) => {
+      return produto.id === id;
+    });
+    if (isBotaoRemove) {
       await clienteService.removeProduto(index);
       window.location.reload();
-    } catch (erro) {
-      console.log(erro);
+    } else if (isBotaoEdita) {
+      window.location.href = `/telas/atualizar-produto.html?produto=${index}`;
     }
+  } catch (erro) {
+    console.log(erro);
   }
 });
+
+// [Edita produtos]
 
 validaForm();

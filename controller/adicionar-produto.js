@@ -4,27 +4,31 @@ import { validaForm } from "../service/validadores.js";
 
 const botaoAdicionar = document.querySelector("[data-cadastro='salvar']");
 
-botaoAdicionar.addEventListener("click", async (evento) => {
-  evento.preventDefault();
+// [Adicionar novo produto]
+const adicionarNovoProduto = () => {
+  botaoAdicionar.addEventListener("click", async (evento) => {
+    evento.preventDefault();
+    const inputsCadastro = document.querySelectorAll("[data-cadastro]");
 
-  const inputsCadastro = document.querySelectorAll("[data-cadastro]");
-  let isValid = true;
-  inputsCadastro.forEach((input) => {
-    if (!valida(input, input.dataset.cadastro)) {
-      isValid = false;
+    let isValid = true;
+    inputsCadastro.forEach((input) => {
+      if (!valida(input, input.dataset.cadastro)) {
+        isValid = false;
+      }
+    });
+
+    if (isValid) {
+      try {
+        await clienteService.criaProduto(dadosProduto());
+        window.location.href = "/telas/produtos.html?admin=true";
+      } catch (erro) {
+        console.log(erro);
+        window.location.href = "/telas/erro.html";
+      }
     }
   });
-
-  if (isValid) {
-    try {
-      await clienteService.criaProduto(dadosProduto());
-      window.location.href = "/telas/produtos.html?admin=true";
-    } catch (erro) {
-      console.log(erro);
-      window.location.href = "/telas/erro.html";
-    }
-  }
-});
+};
+adicionarNovoProduto();
 
 const dadosProduto = () => {
   const urlImagem = document.querySelector("[data-cadastro='url']").value;

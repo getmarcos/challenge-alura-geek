@@ -42,7 +42,7 @@ const criaCardProduto = (produto, categoria) => {
       <p class="card__titulo">${produto.nome}</p>
       <p class="card__preco">${produto.preco}</p>
       <a href="" class="card__link">Ver produto</a>`;
-
+  console.log(produto.preco);
   if (window.location.href.includes("produtos.html?admin=true")) {
     novoProduto.dataset.id = produto.id;
     conteudo = conteudo +
