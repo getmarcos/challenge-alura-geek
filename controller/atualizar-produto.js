@@ -24,10 +24,10 @@ import { clienteService } from "../service/cliente-service.js";
       evento.preventDefault();
       try {
         await clienteService.atualizaProduto(index, dadosProduto());
-        window.location.href = "./telas/produtos.html";
+        window.location.href = "telas/produtos.html";
       } catch (erro) {
         console.log(erro);
-        window.location.href = "./telas/erro.html";
+        window.location.href = "telas/erro.html";
       }
     });
   };

@@ -20,10 +20,10 @@ const adicionarNovoProduto = () => {
     if (isValid) {
       try {
         await clienteService.criaProduto(dadosProduto());
-        window.location.href = "./telas/produtos.html?admin=true";
+        window.location.href = "telas/produtos.html?admin=true";
       } catch (erro) {
         console.log(erro);
-        window.location.href = "./telas/erro.html";
+        window.location.href = "telas/erro.html";
       }
     }
   });
