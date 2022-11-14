@@ -41,7 +41,7 @@
 
     <main>
       <section class="cadastro login container">
-        <form class="formulario">
+        <form class="formulario" data-formulario>
           <h4 class="formulario__titulo">Iniciar Sessão</h4>
           <div class="formulario__campo">
             <label for="email" class="formulario__label"></label>
@@ -50,7 +50,7 @@
               class="formulario__input"
               id="email"
               placeholder="Escreva seu e-mail"
-              data-login="email"
+              data-input="email"
               required
             />
             <span class="mensagem__erro"></span>
@@ -63,7 +63,7 @@
               id="senha"
               placeholder="Escreva sua senha"
               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
-              data-login="senha"
+              data-input="senha"
               required
             />
             <span class="mensagem__erro"></span>
@@ -72,9 +72,8 @@
             type="submit"
             class="formulario__botao botao botao--azul"
             id="enviar"
-            data-botao="login"
+            data-login
             value="Entrar"
-            formaction="./produtos.html"
           />
         </form>
       </section>
@@ -107,7 +106,6 @@
             <input
               type="text"
               class="formulario__input"
-              id="nome"
               maxlength="50"
               data-formulario="nome"
               required
@@ -130,7 +128,6 @@
           <input
             type="submit"
             class="formulario__botao botao botao--azul"
-            id="enviar"
             data-botao="submit"
             value="Enviar mensagem"
           />

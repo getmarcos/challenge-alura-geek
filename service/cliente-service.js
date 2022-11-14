@@ -1,7 +1,5 @@
 const pegaProdutos = () => {
-  return fetch(
-    "https://challenge-ecommerce-alura-geek.herokuapp.com/produtos"
-  ).then((response) => {
+  return fetch("http://localhost:3000/produtos").then((response) => {
     if (response.ok) {
       return response.json();
     }
@@ -10,23 +8,20 @@ const pegaProdutos = () => {
 };
 
 const criaProduto = ({ id, urlImagem, categoria, nome, preco, descricao }) => {
-  return fetch(
-    "https://challenge-ecommerce-alura-geek.herokuapp.com/produtos",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id,
-        urlImagem,
-        categoria,
-        nome,
-        preco,
-        descricao,
-      }),
-    }
-  ).then((response) => {
+  return fetch("http://localhost:3000/produtos", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      id: id,
+      urlImagem: urlImagem,
+      categoria: categoria,
+      nome: nome,
+      preco: preco,
+      descricao: descricao,
+    }),
+  }).then((response) => {
     if (response.ok) {
       return response.json();
     }
@@ -35,12 +30,9 @@ const criaProduto = ({ id, urlImagem, categoria, nome, preco, descricao }) => {
 };
 
 const removeProduto = (id) => {
-  return fetch(
-    `https://challenge-ecommerce-alura-geek.herokuapp.com/produtos/${id}`,
-    {
-      method: "DELETE",
-    }
-  ).then((response) => {
+  return fetch(`http://localhost:3000/produtos/${id}`, {
+    method: "DELETE",
+  }).then((response) => {
     if (!response.ok) {
       throw new Error("Não foi possível remover o produto.");
     }

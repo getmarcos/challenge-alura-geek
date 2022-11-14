@@ -8,21 +8,16 @@ botaoNovoProduto.addEventListener("click", () => {
   window.location.href = "../telas/adicionar-produto.html";
 });
 
-// [Lista todos os produtos (Por categoria ou não)]
+// [Lista todos os produtos]
 const secaoProdutos = document.querySelector("[data-produtos]");
 const listarProdutos = (produtos, categoria) => {
   const tituloCategoria = document.querySelector("[data-categoria]");
-  tituloCategoria.innerText = `${categoria}`;
-
+  tituloCategoria.innerText = `Todos os produtos`;
   const lista = document.createElement("ul");
   lista.classList.add("produtos__cards");
 
   produtos.forEach((produto) => {
-    const novoProduto = produtoService.criaCardProduto(
-      produto,
-      produto.categoria
-    );
-
+    const novoProduto = produtoService.criaCardProduto(produto, produto.categoria);
     if (categoria == null) {
       tituloCategoria.innerText = `Todos os produtos`;
       lista.appendChild(novoProduto);
@@ -33,6 +28,7 @@ const listarProdutos = (produtos, categoria) => {
   secaoProdutos.appendChild(lista);
 };
 
+// [Carrega produtos]
 const carregaProdutos = async () => {
   try {
     const produtos = await clienteService.pegaProdutos();

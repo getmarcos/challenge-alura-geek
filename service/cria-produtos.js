@@ -4,10 +4,7 @@ const criaSecao = (categoria) => {
   secao.innerHTML = `
       <div class="produtos__titulo">
         <h3 class="titulo__texto">${categoria}</h3>
-        <a href="./telas/produtos.html?categoria=${categoria.replace(
-          " ",
-          ""
-        )}" class="titulo__verMais">Ver mais
+        <a href="./telas/produtos.html" class="titulo__verMais">Ver tudo
           <img
             src="./assets/img/seta.svg"
             alt="Seta do link ver mais"
@@ -34,29 +31,10 @@ function validaURL(produto) {
 
 const criaCardProduto = (produto, categoria) => {
   const novoProduto = document.createElement("li");
-  let conteudo;
+  novoProduto.className = "card__item todos__produtos";
   const urlImagem = validaURL(produto);
-  if (window.location.href.includes("/telas/produtos.html")) {
-    novoProduto.className = "card__item todos__produtos";
-    novoProduto.dataset.id = produto.id;
-
-    conteudo = `<img
-        src="${urlImagem}"
-        alt="Produto ${categoria}"
-        class="card__imagem"
-      />
-      <p class="card__titulo">${produto.nome}</p>
-      <p class="card__preco">${produto.preco}</p>
-      <a href="" class="card__link">Ver produto</a>
-      <button class="card__botao card-botao-lixeira data-excluir">
-        <img src="../assets/css/produtos/lixeira.svg" class="card__lixeira">
-      </button>
-      <button class="card__botao card-botao-caneta data-editar">
-        <img src="../assets/css/produtos/caneta.svg" class="card__caneta">
-      </button>`;
-  } else {
-    novoProduto.classList.add("card__item");
-    conteudo = `<img
+  let conteudo = `
+      <img
         src="${urlImagem}"
         alt="Produto ${categoria}"
         class="card__imagem"
@@ -64,6 +42,16 @@ const criaCardProduto = (produto, categoria) => {
       <p class="card__titulo">${produto.nome}</p>
       <p class="card__preco">${produto.preco}</p>
       <a href="" class="card__link">Ver produto</a>`;
+
+  if (window.location.href.includes("produtos.html?admin=true")) {
+    novoProduto.dataset.id = produto.id;
+    conteudo = conteudo +
+      `<button class="card__botao card-botao-lixeira data-excluir">
+        <img src="../assets/css/produtos/lixeira.svg" class="card__lixeira">
+      </button>
+      <button class="card__botao card-botao-caneta data-editar">
+        <img src="../assets/css/produtos/caneta.svg" class="card__caneta">
+      </button>`;
   }
 
   novoProduto.innerHTML = conteudo;

@@ -3,7 +3,6 @@ import { valida } from "../service/valida.js";
 import { validaForm } from "../service/validadores.js";
 
 const botaoAdicionar = document.querySelector("[data-cadastro='salvar']");
-const produtos = await clienteService.pegaProdutos();
 
 botaoAdicionar.addEventListener("click", async (evento) => {
   evento.preventDefault();
@@ -19,7 +18,7 @@ botaoAdicionar.addEventListener("click", async (evento) => {
   if (isValid) {
     try {
       await clienteService.criaProduto(dadosProduto());
-      window.location.href = "/telas/produtos.html";
+      window.location.href = "/telas/produtos.html?admin=true";
     } catch (erro) {
       console.log(erro);
       window.location.href = "/telas/erro.html";
@@ -34,7 +33,7 @@ const dadosProduto = () => {
   const preco = document.querySelector("[data-cadastro='preco']").value;
   const descricao = document.querySelector("[data-cadastro='descricao']").value;
   const dados = {
-    id: produtos.length + 1,
+    id: `${Date.now()}`,
     urlImagem,
     categoria,
     nome,

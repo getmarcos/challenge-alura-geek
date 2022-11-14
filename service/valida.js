@@ -25,14 +25,15 @@ const tiposDeErro = [
 const validadores = {
   preco: (input) => validaPreco(input),
 };
+
 const mensagensDeErro = {
   nome: {
     valueMissing: "Campo nome é obrigatório.",
   },
   email: {
-    valueMissing: "Campo e-mail é obrigatório.",
     typeMismatch: "Informe um endereço de e-mail válido.",
     patternMismatch: "Exemplo de e-mail válido: seuemail@dominio.com.",
+    valueMissing: "Campo e-mail é obrigatório.",
   },
   senha: {
     valueMissing: "Campo senha é obrigatório.",
@@ -70,10 +71,8 @@ function mostraMensagem(tipoDeInput, input) {
 function validaPreco(input) {
   const preco = input.value;
   let mensagem = "";
-
   if (preco == "R$ 0,00") {
     mensagem = "O campo preço não pode ser 0,00.";
   }
-
   input.setCustomValidity(mensagem);
 }
