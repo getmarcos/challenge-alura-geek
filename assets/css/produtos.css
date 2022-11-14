@@ -35,11 +35,11 @@
 }
 
 .card__item:nth-child(n + 5) {
-  display: none;
+  display: block;
 }
 
 .todos__produtos.card__item:nth-child(n + 5) {
-  display: block;
+  display: none;
 }
 
 .card__titulo {

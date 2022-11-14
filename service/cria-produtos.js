@@ -22,7 +22,7 @@ function validaURL(produto) {
   let urlImagem = produto.urlImagem;
   if (
     window.location.href.includes("index.html") &&
-    urlImagem.includes("./assets/img/")
+    urlImagem.includes("/assets/img/")
   ) {
     urlImagem = urlImagem.replace(".", "");
   }
@@ -31,7 +31,7 @@ function validaURL(produto) {
 
 const criaCardProduto = (produto, categoria) => {
   const novoProduto = document.createElement("li");
-  novoProduto.className = "card__item todos__produtos";
+  novoProduto.className = "card__item";
   const urlImagem = validaURL(produto);
   let conteudo = `
       <img
@@ -42,7 +42,7 @@ const criaCardProduto = (produto, categoria) => {
       <p class="card__titulo">${produto.nome}</p>
       <p class="card__preco">${produto.preco}</p>
       <a href="" class="card__link">Ver produto</a>`;
-  console.log(produto.preco);
+
   if (window.location.href.includes("produtos.html?admin=true")) {
     novoProduto.dataset.id = produto.id;
     conteudo = conteudo +
