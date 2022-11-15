@@ -41,7 +41,7 @@
 
     <main>
       <section class="cadastro login container">
-        <form class="formulario" data-formulario>
+        <form class="formulario" data-login>
           <h4 class="formulario__titulo">Iniciar Sessão</h4>
           <div class="formulario__campo">
             <label for="email" class="formulario__label"></label>
@@ -53,7 +53,7 @@
               data-input="email"
               required
             />
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <div class="formulario__campo">
             <input
@@ -66,13 +66,13 @@
               data-input="senha"
               required
             />
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <input
             type="submit"
             class="formulario__botao botao botao--azul"
             id="enviar"
-            data-login
+            data-login="loggar"
             value="Entrar"
           />
         </form>
@@ -110,7 +110,7 @@
               data-formulario="nome"
               required
             />
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <div class="formulario__campo">
             <label for="mensagem" class="formulario__label">Mensagem</label>
@@ -123,7 +123,7 @@
               data-formulario="mensagem"
               required
             ></textarea>
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <input
             type="submit"

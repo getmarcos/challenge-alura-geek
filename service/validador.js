@@ -9,8 +9,10 @@ export function valida(input, tipoDeInput) {
     return true;
   } else {
     input.parentElement.classList.add("formulario__campo--invalido");
-    input.parentElement.querySelector(".mensagem__erro").innerHTML =
-      mostraMensagem(tipoDeInput, input);
+    input.parentElement.querySelector("[data-erro]").innerHTML = mostraMensagem(
+      tipoDeInput,
+      input
+    );
     return false;
   }
 }
@@ -75,4 +77,15 @@ function validaPreco(input) {
     mensagem = "O campo preço não pode ser 0,00.";
   }
   input.setCustomValidity(mensagem);
+}
+
+export function validaForm(botaoSubmit, input) {
+  botaoSubmit.addEventListener("click", (evento) => {
+    evento.preventDefault();
+    valida(input, input.dataset.formulario);
+  });
+
+  input.addEventListener("blur", () => {
+    valida(input, input.dataset.formulario);
+  });
 }

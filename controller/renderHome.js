@@ -1,7 +1,7 @@
-import { validaForm } from "../service/validadores.js";
 import { clienteService } from "../service/cliente-service.js";
-import { pegaCategoria } from "../service/pega-categorias.js";
-import { produtoService } from "../service/cria-produtos.js";
+import { pegaCategoria } from "../service/categoriasUnicas.js";
+import { produtoService } from "../service/criaProdutos.js";
+import { validaForm } from "../service/validador.js";
 
 (async () => {
   try {
@@ -29,5 +29,10 @@ import { produtoService } from "../service/cria-produtos.js";
     window.location.href = "./telas/erro.html";
   }
 
-  validaForm();
+  const botaoSubmit = document.querySelector("[data-botao='submit']");
+  const inputsFormulario = document.querySelectorAll("[data-formulario]");
+  inputsFormulario.forEach((input) => {
+    validaForm(botaoSubmit, input);
+  });
+
 })();

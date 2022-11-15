@@ -55,7 +55,7 @@
               data-cadastro="url"
               required
             />
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <div class="formulario__campo">
             <label for="categoria" class="formulario__label">Categoria</label>
@@ -66,7 +66,7 @@
               data-cadastro="categoria"
               required
             />
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <div class="formulario__campo">
             <label for="nome" class="formulario__label">Nome do produto</label>
@@ -77,7 +77,7 @@
               data-cadastro="nome"
               required
             />
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <div class="formulario__campo">
             <label for="preco" class="formulario__label"
@@ -90,7 +90,7 @@
               data-cadastro="preco"
               required
             />
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <div class="formulario__campo">
             <label for="descricao" class="formulario__label"
@@ -103,13 +103,13 @@
               data-cadastro="descricao"
               required
             />
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <input
             type="submit"
             class="formulario__botao botao botao--azul"
             id="enviar"
-            data-cadastro="salvar"
+            data-cadastro-botao="salvar"
             value="Adicionar produto"
           />
         </form>
@@ -148,7 +148,7 @@
               data-formulario="nome"
               required
             />
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <div class="formulario__campo">
             <label for="mensagem" class="formulario__label">Mensagem</label>
@@ -161,7 +161,7 @@
               data-formulario="mensagem"
               required
             ></textarea>
-            <span class="mensagem__erro"></span>
+            <span class="mensagem__erro" data-erro></span>
           </div>
           <input
             type="submit"
@@ -179,6 +179,6 @@
       </section>
     </footer>
     <!-- <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script> -->
-    <script src="../controller/adicionar-produto.js" type="module"></script>
+    <script src="../controller/adicionarProduto.js" type="module"></script>
   </body>
 </html>

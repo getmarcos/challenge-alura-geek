@@ -1,7 +1,6 @@
-import { valida } from "../service/valida.js";
-import { validaForm } from "../service/validadores.js";
+import { valida, validaForm } from "../service/validador.js";
 
-const botaoLogin = document.querySelector("[data-login]");
+const botaoLogin = document.querySelector("[data-login='loggar']");
 
 botaoLogin.addEventListener("click", (evento) => {
   evento.preventDefault();
@@ -30,4 +29,8 @@ botaoLogin.addEventListener("click", (evento) => {
   }
 });
 
-validaForm();
+const botaoSubmit = document.querySelector("[data-botao='submit']");
+const inputsFormulario = document.querySelectorAll("[data-formulario]");
+inputsFormulario.forEach((input) => {
+  validaForm(botaoSubmit, input);
+});

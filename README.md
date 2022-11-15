@@ -24,10 +24,15 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML e CSS
 - JavaScript
 - Git e Gitbub
+- Node (Contrução da API dos produtos vendidos)
 
 ## 💻 Projeto
 
 O AluraGeek é um projeto que mostra os produtos disponíves na loja e conta com uma página para admnistrar os produtos no sistema.
+
+<p align="center">
+  <img alt="e-commerce alura geek" src=".github/tela-admin.jpg" width="100%">
+</p>
 
 ## 🔖 Layout
 
