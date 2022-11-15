@@ -31,7 +31,11 @@ function validaURL(produto) {
 
 const criaCardProduto = (produto, categoria) => {
   const novoProduto = document.createElement("li");
-  novoProduto.className = "card__item";
+  if (window.location.href.includes("produtos.html")) {
+    novoProduto.classList = "todos__produtos card__item";
+  } else {
+    novoProduto.className = "card__item";
+  }
   const urlImagem = validaURL(produto);
   let conteudo = `
       <img
@@ -45,7 +49,8 @@ const criaCardProduto = (produto, categoria) => {
 
   if (window.location.href.includes("produtos.html?admin=true")) {
     novoProduto.dataset.id = produto.id;
-    conteudo = conteudo +
+    conteudo =
+      conteudo +
       `<button class="card__botao card-botao-lixeira data-excluir">
         <img src="../assets/css/produtos/lixeira.svg" class="card__lixeira">
       </button>

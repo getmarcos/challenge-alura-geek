@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML e CSS
 - JavaScript
 - Git e Gitbub
-- Node (Contrução da API dos produtos vendidos)
+- NodeJS (Contrução da API dos produtos vendidos)
 
 ## 💻 Projeto
 
@@ -33,6 +33,17 @@ O AluraGeek é um projeto que mostra os produtos disponíves na loja e conta com
 <p align="center">
   <img alt="e-commerce alura geek" src=".github/tela-admin.jpg" width="100%">
 </p>
+
+## 🛠️ API
+Você pode acessar a API do projeto e consultar todos os produtos, adicionar, editar e aidna rmeover o produto que desejar.
+
+- `Link da API`: https://challenge-ecommerce-alura-geek.herokuapp.com
+
+- `CRUD`: Métodos **Create, Read, Update e Delete.**
+
+**Para o GET em um produto utilize /produtos e para um produto especifico basta utilizar /produtos/{id}, assim como para o DELETE, PUT, PATCH.**
+
+**A API é bem prática, utilize-a o quanto desejar e deixa lá sua contribuição.**
 
 ## 🔖 Layout
 
