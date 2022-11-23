@@ -2,6 +2,7 @@ import { clienteService } from "../service/cliente-service.js";
 import { validaForm } from "../service/validador.js";
 import { listarProdutos } from "../componentes/listarProdutos.js"
 import { BotaoAdicionarProduto } from "../componentes/BotaoAdicionarNovoProduto.js";
+import { filtrarProduto } from "../service/filtroProdutos.js";
 
 // [Botão adiciona novo produto]
 const secaoProdutos = document.querySelector("[data-produtos]");
@@ -13,9 +14,11 @@ const carregaProdutos = async () => {
     const produtos = await clienteService.pegaProdutos();
     const categoria = new URL(window.location).searchParams.get("categoria");
     listarProdutos(produtos, categoria);
+    filtrarProduto();
+    return produtos;
   } catch (erro) {
     console.log(erro);
-    // window.location.href = "./erro.html";
+    window.location.href = "./erro.html";
   }
 };
 carregaProdutos();

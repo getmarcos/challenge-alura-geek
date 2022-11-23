@@ -2,6 +2,7 @@ import { clienteService } from "../service/cliente-service.js";
 import { pegaCategoria } from "../service/categoriasUnicas.js";
 import { produtoService } from "../service/criaProdutos.js";
 import { validaForm } from "../service/validador.js";
+import { filtrarProduto } from "../service/filtroProdutos.js";
 
 (async () => {
   try {
@@ -12,15 +13,11 @@ import { validaForm } from "../service/validador.js";
     categorias.forEach((categoria) => {
       const secao = produtoService.criaSecao(categoria);
       $produtos.appendChild(secao);
-      const lista = document.querySelector(`[data-list='${categoria}']`);
-
+      const $lista = document.querySelector(`[data-list='${categoria}']`);
       produtos.forEach((produto) => {
         if (produto.categoria === categoria) {
-          const produtoNovo = produtoService.criaCardProduto(
-            produto,
-            categoria
-          );
-          lista.appendChild(produtoNovo);
+          const produtoNovo = produtoService.criaCardProduto(produto, categoria);
+          $lista.appendChild(produtoNovo);
         }
       });
     });
@@ -35,4 +32,5 @@ import { validaForm } from "../service/validador.js";
     validaForm(botaoSubmit, input);
   });
 
+  filtrarProduto();
 })();
